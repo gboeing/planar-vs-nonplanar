@@ -1,4 +1,0 @@
-name,distance,count_cleaned_intersections,count_nonplanar_intersections,count_planar_intersections,nodes,overcount_nonplanar_cleaned,overcount_planar_cleaned,overcount_planar_nonplanar,runtime
-oakland_telegraph,500,116,147,254,224,1.267,2.19,1.728,5.176
-florence_duomo,500,232,344,356,457,1.483,1.534,1.035,14.631
-tokyo_takaracho,500,324,878,1046,1025,2.71,3.228,1.191,82.077

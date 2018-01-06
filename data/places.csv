@@ -1,0 +1,51 @@
+country,city,lat,lng
+Argentina,Buenos Aires,-34.608657, -58.375547
+Australia,Sydney,-33.863616, 151.208977
+Brazil,Sao Paulo,-23.549155,-46.6336
+Canada,Toronto,43.649903,-79.380838
+Canada,Vancouver,49.281651,-123.121363
+Chile,Santiago,-33.439754, -70.654296
+China,Beijing,39.908427, 116.465505
+China,Shanghai,31.236286, 121.503787
+China,Hong Kong,22.282321, 114.156843
+Denmark,Copenhagen,55.679443, 12.578284
+Egypt,Cairo,30.044485, 31.235725
+France,Lyon,45.761016, 4.833705
+France,Paris,48.865579, 2.352091
+Germany,Berlin,52.521881, 13.412545
+India,Delhi,28.653108, 77.229937
+Indonesia,Jakarta,-6.194934, 106.822871
+Iran,Tehran,35.691883, 51.383896
+Italy,Bologna,44.494856, 11.342612
+Italy,Florence,43.772912,11.255328
+Italy,Milan,45.468243, 9.182484
+Japan,Osaka,34.693758, 135.501093
+Japan,Tokyo,35.688280, 139.698188
+Kenya,Nairobi,-1.281490, 36.822077
+Mexico,Mexico City,19.426895, -99.167636
+Nigeria,Lagos,6.458257, 3.388064
+Peru,Lima,-12.043384, -77.043067
+Philippines,Manila,14.598500, 120.978404
+Russia,Moscow,55.749165, 37.537873
+Singapore,Singapore,1.293987, 103.856525
+Somalia,Mogadishu,2.045684, 45.319750
+South Africa,Johannesburg,-26.206864, 28.044249
+Spain,Barcelona,41.388428, 2.171327
+Switzerland,Geneva,46.201351, 6.148301
+Thailand,Bangkok,13.755901, 100.505214
+Turkey,Istanbul,41.013308, 28.961120
+UAE,Dubai,25.202671, 55.274985
+UK,Edinburgh,55.953325, -3.189150
+UK,London,51.513387, -0.088985
+USA,Atlanta,33.756297,-84.386107
+USA,Chicago,41.880601,-87.632326
+USA,Cincinnati,39.101593,-84.514753
+USA,Dallas,32.777714,-96.805628
+USA,Los Angeles,34.056394,-118.249837
+USA,Miami,25.772500,-80.194432
+USA,New York,40.713951,-74.005871
+USA,Phoenix,33.448217,-112.073827
+USA,San Francisco,37.789269,-122.401411
+USA,Seattle,47.61117,-122.33445
+USA,Washington DC,38.904701,-77.036535
+Venezuela,Caracas,10.494903, -66.850865
