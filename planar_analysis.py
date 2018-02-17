@@ -11,14 +11,19 @@ from shapely.geometry import Point, Polygon, LineString, MultiLineString
 
 def get_graph(coords, distance, network_type):
     
-    G = ox.graph_from_point(center_point=coords, distance=distance, distance_type='bbox', network_type=network_type,
-                            simplify=True, truncate_by_edge=True, retain_all=True)
-    
+    G = ox.graph_from_point(center_point=coords,
+    						distance=distance,
+    						distance_type='bbox',
+    						network_type=network_type,
+                            simplify=True,
+                            truncate_by_edge=True,
+                            retain_all=True)
     return G
 
 
 
 def calculate_planar_intersections(G_proj, bbox, buff_dist=0.000001): # buffer .001mm
+	# G_proj must be a projected graph
 
     # get an undirected graph to do line intersection counts (so we don't have identical line segments in each direction)
     G_undir = ox.get_undirected(G_proj)
@@ -46,6 +51,7 @@ def calculate_planar_intersections(G_proj, bbox, buff_dist=0.000001): # buffer .
 
 
 def calculate_nonplanar_intersections(G_proj, bbox):
+	# G_proj must be a projected graph
     
     # identify every true street intersection in the graph by retaining all the nodes
     # that have more than one street emanating from them. this will include nodes that
@@ -63,7 +69,7 @@ def calculate_nonplanar_intersections(G_proj, bbox):
 
 
 
-def calculate_cleaned_intersections(nonplanar_intersections, original_crs, tolerance=10):
+def calculate_cleaned_intersections(nonplanar_intersections, tolerance=10):
 	# nonplanar_intersections must be projected to meters
     
     try:
@@ -87,6 +93,7 @@ def calculate_cleaned_intersections(nonplanar_intersections, original_crs, toler
 
 
 def calculate_edge_length_ratios(G_proj, planar_intersections, buffer_size=0.00001): # buffer .01mm
+	# G_proj must be a projected graph
     
 	edges = ox.graph_to_gdfs(G_proj, nodes=False, fill_edge_geometry=True)
 	points = gpd.GeoDataFrame(geometry=planar_intersections)
@@ -106,13 +113,10 @@ def calculate_edge_length_ratios(G_proj, planar_intersections, buffer_size=0.000
 	    elif diff.is_empty:
 	        pass
 	    else:
-	        print('error: ', type(diff))
+	        print('calculate_edge_length_ratios error: ', type(diff))
 
 	mean_planar_segment_length = gpd.GeoSeries(segments).length.mean()
 	mean_edge_length = edges['geometry'].length.mean()
 	edge_length_ratio = mean_planar_segment_length / mean_edge_length
 
 	return mean_edge_length, mean_planar_segment_length, edge_length_ratio
-
-
-
