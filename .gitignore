@@ -1,5 +1,6 @@
 *.docx
 cache/*
+data/graph*
 
 
 # Byte-compiled / optimized / DLL files
